@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="startPane" prefHeight="500" prefWidth="500" styleClass="border" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+    <padding><Insets bottom="30" left="30" right="30" top="30" /></padding>
+
+    <left><VBox fx:id="vbox1" alignment="BOTTOM_LEFT" spacing="20">
+        <Label fx:id="portLabel" text="Port Number:"/>
+        <TextField
+                fx:id="portTF" alignment="TOP_CENTER" editable="true" promptText="Enter Port Number" BorderPane.alignment="CENTER_LEFT" />
+    </VBox></left>
+
+    <top><Label fx:id="title1" text="Connect Four Server" BorderPane.alignment="TOP_CENTER"/></top>
+    <bottom><Button fx:id="startServer" onAction="#startServerMethod" prefHeight="50" prefWidth="100" text="Start Server" BorderPane.alignment="BOTTOM_CENTER" /></bottom>
+
+</BorderPane>

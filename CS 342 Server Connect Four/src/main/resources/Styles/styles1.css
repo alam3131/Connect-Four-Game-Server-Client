@@ -1,0 +1,17 @@
+.button{
+	-fx-font-size: 14px;
+	-fx-background-color: #7dfa5a
+}
+
+.label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bolder;
+}
+
+.border {
+	-fx-background-color: #5099f7;
+	-fx-background-image: url("/Images/yellowSquares.png");
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center center;
+	-fx-background-size: 300 300;
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="startPane" prefHeight="500" prefWidth="500" styleClass="border" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+    <padding><Insets bottom="50" left="50" right="50" top="50" /></padding>
+
+    <top><Label fx:id="resultLabel" text="Default" BorderPane.alignment="TOP_CENTER"/></top>
+
+    <center><VBox fx:id="vbox2" spacing="20" alignment="CENTER">
+        <Button fx:id="playAgain" prefHeight="50" prefWidth="100" onAction="#playAgainMethod" text="Play Again"/>
+        <Button fx:id="exit" prefHeight="50" prefWidth="100" onAction="#exitMethod" text="Exit"/>
+    </VBox></center>
+
+</BorderPane>
