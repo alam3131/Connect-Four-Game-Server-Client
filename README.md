@@ -16,5 +16,20 @@
 * JavaFX 19
 * Maven surefire plugin 2.22.1
 * Maven compiler plugin 3.8.1
- 
- 
+
+
+### The App
+
+##### Starting Screens
+<img width="600" alt="Screenshot 2023-02-15 at 6 59 01 PM" src="https://user-images.githubusercontent.com/112432705/219231210-0bd3a78a-9822-4486-9141-4151cb1b9952.png">
+<img width="601" alt="Screenshot 2023-02-15 at 7 00 01 PM" src="https://user-images.githubusercontent.com/112432705/219231222-33142701-44c0-46b1-b349-4f5ab98f571e.png">
+
+##### The Server
+ <img width="599" alt="Screenshot 2023-02-15 at 7 05 17 PM" src="https://user-images.githubusercontent.com/112432705/219231675-6d98cff9-1114-4103-be29-145f6dfe1d14.png">
+
+##### The Game
+###### Player 1
+<img width="600" alt="Screenshot 2023-02-15 at 7 01 51 PM" src="https://user-images.githubusercontent.com/112432705/219232031-c6b8446d-e6b9-4100-9320-5c516e59db0c.png">
+
+###### Player 2
+<img width="599" alt="Screenshot 2023-02-15 at 7 01 38 PM" src="https://user-images.githubusercontent.com/112432705/219232168-13a50a03-1a6a-4020-b401-9cccd040578d.png">
