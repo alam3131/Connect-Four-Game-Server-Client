@@ -9,7 +9,7 @@
  3. Once server and two client windows are running, enter the port number "5555" and "127.0.0.1" then click the start buttons. Start the server before starting the clients.
  4. The game will indicate which player's turn it is and server will show when clients have connected. Players may now play the game. Have fun!
 
-**Note: The play again button that appears after the game has finished is still a work in progress and does not work. Sorry. :(**
+**Note: The "play again" button that appears after the game has finished is still a work in progress and does not work. Sorry. :(**
  
  ### Technologies
 * Apache Maven 4.0.0
