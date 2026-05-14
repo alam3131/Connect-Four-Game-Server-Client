@@ -3,6 +3,9 @@ import java.util.Objects;
 
 public class ConnectFourLogic {
     // 0 = None; 1 = Player 1 win; 2 = Player 2 win; 3 = tie game
+    // Red --> Player 1
+    // Yellow --> Player 2
+    // Return Pair<Integer, Integer[][]> which is a pair with <winner, winning position>
     public static Pair<Integer, Integer[][]> evalBoard (String buttonColor, GameButton[][] board) {
         // Check horizontal for win
         for(int col = 0; col < 4; col++) {
@@ -32,7 +35,7 @@ public class ConnectFourLogic {
             }
         }
 
-        // Check for positive diagonal for win
+        // Check for negative diagonal for win
         for(int col = 0; col < 4; col++) {
             for(int row = 0; row < 3; row++) {
                 if((Objects.equals(board[row][col].color, buttonColor)) && (Objects.equals(board[row+1][col+1].color, buttonColor)) && (Objects.equals(board[row+2][col+2].color, buttonColor)) && (Objects.equals(board[row+3][col+3].color, buttonColor))) {
@@ -46,7 +49,7 @@ public class ConnectFourLogic {
             }
         }
 
-        // Check for negative diagonal for win
+        // Check for positive diagonal for win
         for(int col = 0; col < 4; col++) {
             for(int row = 3; row < 6; row++) {
                 if((Objects.equals(board[row][col].color, buttonColor)) && (Objects.equals(board[row-1][col+1].color, buttonColor)) && (Objects.equals(board[row-2][col+2].color, buttonColor)) && (Objects.equals(board[row-3][col+3].color, buttonColor))) {

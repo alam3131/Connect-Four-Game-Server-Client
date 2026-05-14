@@ -7,7 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="JavaFXTemplateFall22" />
-        <module name="CS 342 Server Connect Four" />
+        <module name="serverProgramProjectThree" />
       </profile>
     </annotationProcessing>
   </component>
