@@ -8,14 +8,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.VBox;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.HBox;
 import javafx.application.Platform;
 
 public class Controller implements Initializable {
@@ -24,24 +19,10 @@ public class Controller implements Initializable {
     private TextField portTF;
 
     @FXML
-    private Button startServer;
-
-    @FXML
     private BorderPane startPane;
 
     @FXML
-    private VBox vBox1, vBox2;
-
-    @FXML
-    private HBox hBox1;
-
-    @FXML
     private ListView<String> numClients, score, gameInfo;
-
-    @FXML
-    private Label title1, title2, portLabel;
-
-    private static int portNum;
 
     Server serverConnection;
 
@@ -50,7 +31,7 @@ public class Controller implements Initializable {
     }
 
     public void startServerMethod(ActionEvent e) throws IOException {
-        portNum = Integer.parseInt(portTF.getText());
+        int portNum = Integer.parseInt(portTF.getText());
         // Checks port number is valid
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/runningServer.fxml"));
         Parent root2 = loader.load(); //load view into parent
@@ -64,6 +45,8 @@ public class Controller implements Initializable {
 
         serverConnection = new Server(portNum,
             numClientString -> {Platform.runLater(()->{
+                // Clears listview and adds text each time a client joins or leaves to keep
+                // client count accurate
                 ctrl.numClients.getItems().clear();
                 ctrl.numClients.getItems().add("Client Count");
                 ctrl.numClients.getItems().add(numClientString.toString());

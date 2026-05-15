@@ -6,9 +6,6 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.function.Consumer;
 
-import javafx.application.Platform;
-import javafx.scene.control.ListView;
-
 public class Server{
 
     int count = 1; // Client number
@@ -26,7 +23,7 @@ public class Server{
 
 
     public class TheServer extends Thread{
-        private int portNum;
+        private final int portNum;
         TheServer(int portNum) {
             this.portNum = portNum;
         }
@@ -37,6 +34,7 @@ public class Server{
                 gameInfoCallback.accept("Server is waiting for a client!");
 
                 while (true) {
+                    // mysocket.accept pauses the thread and only continues when a connection arrives
                     ClientThread c = new ClientThread(mysocket.accept(), count);
                     clients.add(c);
                     c.start();
@@ -70,15 +68,16 @@ public class Server{
             this.count = count;
         }
 
+        // Loops through all client threads in clients and sends data object to each one
         public void updateClients(CFourInfo data) {
-            for(int i = 0; i < clients.size(); i++) {
+            for (ClientThread t : clients) {
                 // get each client
-                ClientThread t = clients.get(i);
                 try {
                     // give updated message
                     t.out.writeObject(data);
+                } catch (Exception e) {
+                    System.out.println("Failed to update clients");
                 }
-                catch(Exception e) {}
             }
         }
 

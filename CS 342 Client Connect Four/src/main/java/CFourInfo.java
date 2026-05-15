@@ -16,7 +16,7 @@ public class CFourInfo implements Serializable{
         p1Plays = "";
         p2Plays = "";
         have2Players = false;
-        gameResult = new Pair<Integer, Integer[][]> (0, null);
+        gameResult = new Pair<> (0, null);
         playerTurn = 1;
         p1PlayAgain = false;
         p2PlayAgain = false;

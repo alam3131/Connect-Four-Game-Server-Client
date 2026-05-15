@@ -277,6 +277,7 @@ public class Controller implements Initializable {
     // Exits the application
     public void exitMethod(ActionEvent e) {
         Platform.exit();
+        System.exit(0);
     }
 
     // Sends to the server that client wants to play again
